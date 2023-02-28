@@ -10,16 +10,16 @@
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
-<nav id="navbar" class="flex justify-around py-4 fixed z-10 w-full bg-[#F7F5F1]">
+<nav id="navbar" class="flex justify-around py-4 z-10 fixed w-full backdrop-blur">
     <img src="dist/images/Logo.png" alt="logo website" class="h-12 cursor-pointer">
     <div class="flex items-center">
         <ul class="flex">
-            <li class="text-slate-600 font-semibold mx-3 cursor-pointer hover:text-slate-900 hover:font-bold transition">HOME</li>
-            <li class="text-slate-600 font-semibold mx-3 cursor-pointer hover:text-slate-900 hover:font-bold transition">SERVICE</li>
-            <li class="text-slate-600 font-semibold mx-3 cursor-pointer hover:text-slate-900 hover:font-bold transition">ABOUT</li>
-            <li class="text-slate-600 font-semibold mx-3 cursor-pointer hover:text-slate-900 hover:font-bold transition">PAGES</li>
-            <li class="text-slate-600 font-semibold mx-3 cursor-pointer hover:text-slate-900 hover:font-bold transition">BLOG</li>
-            <li class="text-slate-600 font-semibold mx-3 cursor-pointer hover:text-slate-900 hover:font-bold transition">CONTACT</li>
+            <li id="btn_home" class="text-slate-600 font-semibold mx-3 cursor-pointer hover:text-slate-900 hover:font-bold hover:border-b-2 border-b-black transition">HOME</li>
+            <li id="btn_service" class="text-slate-600 font-semibold mx-3 cursor-pointer hover:text-slate-900 hover:font-bold hover:border-b-2 border-b-black transition">SERVICE</li>
+            <li id="btn_about" class="text-slate-600 font-semibold mx-3 cursor-pointer hover:text-slate-900 hover:font-bold hover:border-b-2 border-b-black transition">ABOUT</li>
+            <li id="btn_page" class="text-slate-600 font-semibold mx-3 cursor-pointer hover:text-slate-900 hover:font-bold hover:border-b-2 border-b-black transition">PAGES</li>
+            <li id="btn_blog" class="text-slate-600 font-semibold mx-3 cursor-pointer hover:text-slate-900 hover:font-bold hover:border-b-2 border-b-black transition">BLOG</li>
+            <li id="btn_contact" class="text-slate-600 font-semibold mx-3 cursor-pointer hover:text-slate-900 hover:font-bold hover:border-b-2 border-b-black transition">CONTACT</li>
         </ul>
     </div>
     <div class="flex items-center">
@@ -28,148 +28,370 @@
         <button class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition">SIGN UP</button>
     </div>
 </nav>
-<section id="banner" class="relative">
-    <img src="dist/images/home/BG.png" alt="home banner" class="w-full">
-    <div class="absolute top-1/3 left-52 w-[650px]">
-        <h1 class="font-bold text-slate-700 text-6xl mb-8">Branding to fuel your growth goals & ideas.</h1>
-        <p class="text-gray-700">We're a digital product and UX agency in San Francisco. Strategy, design,
-            and development across all platforms.</p>
-        <div class="flex mt-10 items-center">
-            <button class="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition">Get Started</button>
-            <img src="dist/Phosphor_Icons_Regular/Play.png" alt="play button" class="mx-4 bg-white shadow-lg cursor-pointer p-5 rounded-full">
-            <span class="text-gray-600 font-semibold cursor-pointer">How It Works</span>
+<section id="home_nav" class="hidden">
+    <section id="banner" class="relative">
+        <img src="dist/images/home/BG.png" alt="home banner" class="w-full">
+        <div class="absolute top-1/3 left-52 w-[650px]">
+            <h1 class="font-bold text-slate-700 text-6xl mb-8">Branding to fuel your growth goals & ideas.</h1>
+            <p class="text-gray-700">We're a digital product and UX agency in San Francisco. Strategy, design,
+                and development across all platforms.</p>
+            <div class="flex mt-10 items-center">
+                <button class="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition">Get Started</button>
+                <img src="dist/Phosphor_Icons_Regular/Play.png" alt="play button" class="mx-4 bg-white shadow-lg cursor-pointer p-5 rounded-full">
+                <span class="text-gray-600 font-semibold cursor-pointer">How It Works</span>
+            </div>
         </div>
-    </div>
-    <img src="dist/images/home/Scroll.png" alt="scroll down" class="-translate-y-1/2 mx-auto cursor-pointer">
-</section>
-<section id="service" class="w-[1170px] mx-auto mt-20 mb-32">
-    <div class="text-center mb-20">
-        <h2 class="text-slate-700 font-bold text-5xl mb-8">We design engaging digital products used by millions of people</h2>
-        <span class="text-gray-600">We team up with marketing departments of large companies and startups to deliver award‑winning websites</span>
-    </div>
-    <div class="grid grid-cols-3 gap-8 mb-14">
-        <div class="border hover:shadow-xl transition cursor-pointer text-center p-9 rounded-2xl">
-            <img src="dist/Phosphor_Icons_Regular/Rocket.png" alt="rocker images" class="mx-auto mb-5 mt-11">
-            <h3 class="font-bold mb-10 text-xl">Branding</h3>
-            <span>We design digital platforms to empower users and your brand's tribe.</span>
+        <img src="dist/images/home/Scroll.png" alt="scroll down" class="-translate-y-1/2 mx-auto cursor-pointer">
+    </section>
+    <section id="service" class="w-[1170px] mx-auto mt-20 mb-32">
+        <div class="text-center mb-20">
+            <h2 class="text-slate-700 font-bold text-5xl mb-8">We design engaging digital products used by millions of people</h2>
+            <span class="text-gray-600">We team up with marketing departments of large companies and startups to deliver award‑winning websites</span>
         </div>
-        <div class="border hover:shadow-xl transition cursor-pointer text-center p-9 rounded-2xl">
-            <img src="dist/Phosphor_Icons_Regular/Rocket.png" alt="rocker images" class="mx-auto mb-5 mt-11">
-            <h3 class="font-bold mb-10 text-xl">Development</h3>
-            <span>We design digital platforms to empower users and your brand's tribe.</span>
+        <div class="grid grid-cols-3 gap-8 mb-14">
+            <div class="border hover:shadow-xl transition cursor-pointer text-center p-9 rounded-2xl">
+                <img src="dist/Phosphor_Icons_Regular/Rocket.png" alt="rocker images" class="mx-auto mb-5 mt-11">
+                <h3 class="font-bold mb-10 text-xl">Branding</h3>
+                <span>We design digital platforms to empower users and your brand's tribe.</span>
+            </div>
+            <div class="border hover:shadow-xl transition cursor-pointer text-center p-9 rounded-2xl">
+                <img src="dist/Phosphor_Icons_Regular/Rocket.png" alt="rocker images" class="mx-auto mb-5 mt-11">
+                <h3 class="font-bold mb-10 text-xl">Development</h3>
+                <span>We design digital platforms to empower users and your brand's tribe.</span>
+            </div>
+            <div class="border hover:shadow-xl transition cursor-pointer text-center p-9 rounded-2xl">
+                <img src="dist/Phosphor_Icons_Regular/Rocket.png" alt="rocker images" class="mx-auto mb-5 mt-11">
+                <h3 class="font-bold mb-10 text-xl">Strategy</h3>
+                <span>We design digital platforms to empower users and your brand's tribe.</span>
+            </div>
         </div>
-        <div class="border hover:shadow-xl transition cursor-pointer text-center p-9 rounded-2xl">
-            <img src="dist/Phosphor_Icons_Regular/Rocket.png" alt="rocker images" class="mx-auto mb-5 mt-11">
-            <h3 class="font-bold mb-10 text-xl">Strategy</h3>
-            <span>We design digital platforms to empower users and your brand's tribe.</span>
-        </div>
-    </div>
-    <div class="flex justify-center">
-        <button class="bg-blue-500 rounded-lg text-white px-4 py-2">View Our Services</button>
-    </div>
-</section>
-<section id="logo" class="text-center mb-32">
-    <h3 class="text-2xl font-bold mb-20">Working with the most trusted brands in the industry</h3>
-    <img src="dist/images/home/Items.png" alt="logo images" class="mx-auto">
-</section>
-<section id="about" class="bg-[#F7F5F1] py-32">
-    <div class="text-center mb-32">
-        <h2 class="text-5xl font-semibold text-slate-700 mb-8">Digital products that people love to use</h2>
-        <span class="text-gray-600 text-lg">Applying behavioral science to customer experience</span>
-    </div>
-    <div class="w-[1170px] mx-auto">
         <div class="flex justify-center">
-            <img src="dist/images/home/section_img%20(1).png" alt="about images">
-            <div class="w-[470px]">
-                <h3 class="text-slate-800 text-3xl font-semibold mb-8 mt-24">Web3 Experience Design</h3>
-                <span class="text-gray-600">In the new digital era, users are in control of content and community, and experience design is essential.</span>
-                <div class="mt-12">
-                    <div class="flex my-8">
-                        <img src="dist/images/home/section_icon%20(1).png" alt="icon about section" class="mr-3 h-full">
-                        <div>
-                            <h4 class="text-slate-800 font-semibold mb-2">Design & Development Systems</h4>
-                            <span class="text-gray-600">Chat, start meetings or join them with a click from within your conversation.</span>
+            <button class="bg-blue-500 rounded-lg text-white px-4 py-2">View Our Services</button>
+        </div>
+    </section>
+    <section id="logo" class="text-center mb-32">
+        <h3 class="text-2xl font-bold mb-20">Working with the most trusted brands in the industry</h3>
+        <img src="dist/images/home/Items.png" alt="logo images" class="mx-auto">
+    </section>
+    <section id="about" class="bg-[#F7F5F1] py-32">
+        <div class="text-center mb-32">
+            <h2 class="text-5xl font-semibold text-slate-700 mb-8">Digital products that people love to use</h2>
+            <span class="text-gray-600 text-lg">Applying behavioral science to customer experience</span>
+        </div>
+        <div class="w-[1170px] mx-auto">
+            <div class="flex justify-center">
+                <img src="dist/images/home/section_img%20(1).png" alt="about images">
+                <div class="w-[470px]">
+                    <h3 class="text-slate-800 text-3xl font-semibold mb-8 mt-24">Web3 Experience Design</h3>
+                    <span class="text-gray-600">In the new digital era, users are in control of content and community, and experience design is essential.</span>
+                    <div class="mt-12">
+                        <div class="flex my-8">
+                            <img src="dist/images/home/section_icon%20(1).png" alt="icon about section" class="mr-3 h-full">
+                            <div>
+                                <h4 class="text-slate-800 font-semibold mb-2">Design & Development Systems</h4>
+                                <span class="text-gray-600">Chat, start meetings or join them with a click from within your conversation.</span>
+                            </div>
                         </div>
-                    </div>
-                    <div class="flex my-8">
-                        <img src="dist/images/home/section_icon%20(2).png" alt="icon about section" class="mr-3 h-full">
-                        <div>
-                            <h4 class="text-slate-800 font-semibold mb-2">Digital Growth Strategy</h4>
-                            <span class="text-gray-600">Chat, start meetings or join them with a click from within your conversation.</span>
+                        <div class="flex my-8">
+                            <img src="dist/images/home/section_icon%20(2).png" alt="icon about section" class="mr-3 h-full">
+                            <div>
+                                <h4 class="text-slate-800 font-semibold mb-2">Digital Growth Strategy</h4>
+                                <span class="text-gray-600">Chat, start meetings or join them with a click from within your conversation.</span>
+                            </div>
                         </div>
-                    </div>
-                    <div class="flex my83">
-                        <img src="dist/images/home/section_icon%20(3).png" alt="icon about section" class="mr-3 h-full">
-                        <div>
-                            <h4 class="text-slate-800 font-semibold mb-2">User Journey Mapping</h4>
-                            <span class="text-gray-600">Chat, start meetings or join them with a click from within your conversation.</span>
+                        <div class="flex my83">
+                            <img src="dist/images/home/section_icon%20(3).png" alt="icon about section" class="mr-3 h-full">
+                            <div>
+                                <h4 class="text-slate-800 font-semibold mb-2">User Journey Mapping</h4>
+                                <span class="text-gray-600">Chat, start meetings or join them with a click from within your conversation.</span>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="flex justify-center my-36">
-            <div class="w-[500px]">
-                <h3 class="text-slate-700 text-3xl font-semibold mb-8 mt-24">We create world-class products</h3>
-                <p class="text-gray-600 text-lg">We're a web design agency creating next‑level websites by strategically blending user experience and brand storytelling.
-                    <br> <br>
-                    Our full‑stack design and development agency based in San Francisco provides front‑end and back‑end development services
-                    working closely with our designers. As a UX UI and app development company, we build native mobile apps for iOS and Android,
-                    web applications, apps for wearables, and B2B/enterprise software.</p>
-                <button class="bg-blue-500 text-white py-2 px-4 rounded-lg hover:bg-blue-600 transition mt-16">Discover Now</button>
+            <div class="flex justify-center my-36">
+                <div class="w-[500px]">
+                    <h3 class="text-slate-700 text-3xl font-semibold mb-8 mt-24">We create world-class products</h3>
+                    <p class="text-gray-600 text-lg">We're a web design agency creating next‑level websites by strategically blending user experience and brand storytelling.
+                        <br> <br>
+                        Our full‑stack design and development agency based in San Francisco provides front‑end and back‑end development services
+                        working closely with our designers. As a UX UI and app development company, we build native mobile apps for iOS and Android,
+                        web applications, apps for wearables, and B2B/enterprise software.</p>
+                    <button class="bg-blue-500 text-white py-2 px-4 rounded-lg hover:bg-blue-600 transition mt-16">Discover Now</button>
+                </div>
+                <img src="dist/images/home/section_img%20(2).png" alt="section images">
             </div>
-            <img src="dist/images/home/section_img%20(2).png" alt="section images">
+            <div class="flex justify-center">
+                <img src="dist/images/home/section_img%20(3).png" alt="section images">
+                <div class="mt-24">
+                    <h3 class="text-slate-600 font-semibold text-3xl mb-8">UI/UX design and branding agency</h3>
+                    <p class="text-lg text-gray-600">We start each new digital product design partnership with an in‑depth discovery phase to immerse
+                        ourselves in your business. Our UX/UI designers interview stakeholders, conduct user research,
+                        analyze your competition, and consolidate content. The result is an action plan on executing a
+                        holistic brand and user experience.</p>
+                    <button class="bg-blue-500 rounded-lg text-white py-2 px-4 hover:bg-blue-600 transition mt-16">Our Services</button>
+                </div>
+            </div>
         </div>
-        <div class="flex justify-center">
-            <img src="dist/images/home/section_img%20(3).png" alt="section images">
-            <div class="mt-24">
-                <h3 class="text-slate-600 font-semibold text-3xl mb-8">UI/UX design and branding agency</h3>
-                <p class="text-lg text-gray-600">We start each new digital product design partnership with an in‑depth discovery phase to immerse
-                    ourselves in your business. Our UX/UI designers interview stakeholders, conduct user research,
-                    analyze your competition, and consolidate content. The result is an action plan on executing a
-                    holistic brand and user experience.</p>
-                <button class="bg-blue-500 rounded-lg text-white py-2 px-4 hover:bg-blue-600 transition mt-16">Our Services</button>
+    </section>
+    <section id="portfolio" class="w-[1170px] mx-auto my-32">
+        <h2 class="text-slate-700 text-4xl font-semibold text-center mb-24">Explore our recent client success stories and witness our full 360 transformations come to life</h2>
+        <div>
+            <div class="flex gap-8">
+                <div>
+                    <img src="dist/images/home/portfolio_img%20(4).png" alt="portfolio images">
+                    <p class="text-blue-600 text-lg mt-8 mb-12">UX/UI Design</p>
+                </div>
+                <div>
+                    <img src="dist/images/home/portfolio_img%20(3).png" alt="portfolio images">
+                    <p class="text-blue-600 text-lg mt-8 mb-12">NFT Market UI</p>
+                </div>
+            </div>
+            <div class="flex gap-8">
+                <div>
+                    <img src="dist/images/home/portfolio_img%20(2).png" alt="portfolio images">
+                    <p class="text-blue-600 text-lg mt-8 mb-12">Health Mobile App</p>
+                </div>
+                <div>
+                    <img src="dist/images/home/portfolio_img%20(1).png" alt="portfolio images">
+                    <p class="text-blue-600 text-lg mt-8 mb-12">Wallet App Development</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="CTA" class="relative">
+        <img src="dist/images/home/Footer_BG.png" alt="footer background" class="w-full h-fit">
+        <div class="absolute top-1/4 flex justify-center w-full text-center">
+            <div class="w-[870px]">
+                <h2 class="text-slate-700 font-bold text-5xl mb-8">We design & develop transformative
+                    user experiences from Silicon Valley</h2>
+                <p class="text-gray-600 text-lg mb-16">Are you ready to start your project? Contact us today and get started!</p>
+                <button class="bg-blue-500 px-4 py-2 rounded-lg text-white hover:bg-blue-600 transition mx-auto">Get Started</button>
+            </div>
+        </div>
+    </section>
+</section>
+<section id="service_nav" class="">
+    <div class="mb-32">
+        <img src="dist/images/service/BG.png" alt="background images" class="relative w-full h-[500px]">
+        <div class="absolute top-1/4 left-1/2 -translate-x-1/2 text-center">
+            <h1 class="mb-8 text-5xl font-semibold text-slate-700">Our Services</h1>
+            <h2 class="uppercase"><span class="font-bold">homepage</span> / Services</h2>
+        </div>
+    </div>
+    <div class="w-[1170px] mx-auto">
+        <div class="mt-28 mb-24">
+            <div class="text-center mb-24">
+                <h2 class="text-5xl text-slate-700 font-semibold">An outstanding strategy, design, and development across all platforms</h2>
+                <p class="text-slate-700 mt-8">Share ideas, make decisions and move work forward with a common purpose and place</p>
+            </div>
+            <div class="flex">
+                <div class="grid grid-cols-2 grid-rows-2 gap-8 mr-32">
+                    <div class="text-center border rounded-lg hover:shadow-xl p-10 transition cursor-pointer">
+                        <img src="dist/images/service/Rocket.png" alt="icon card" class="mx-auto mb-8">
+                        <h4 class="font-semibold text-xl mb-5">Startups</h4>
+                        <p class="text-slate-500">From cultivating new ideas to connecting the dots for customers or users.</p>
+                    </div>
+                    <div class="text-center border rounded-lg hover:shadow-xl p-10 transition cursor-pointer">
+                        <img src="dist/images/service/Layers.png" alt="icon card" class="mx-auto mb-8">
+                        <h4 class="font-semibold text-xl mb-5">Development</h4>
+                        <p class="text-slate-500">From cultivating new ideas to connecting the dots for customers or users.</p>
+                    </div>
+                    <div class="text-center border rounded-lg hover:shadow-xl p-10 transition cursor-pointer">
+                        <img src="dist/images/service/Chart.png" alt="icon card" class="mx-auto mb-8">
+                        <h4 class="font-semibold text-xl mb-5">Analytics</h4>
+                        <p class="text-slate-500">From cultivating new ideas to connecting the dots for customers or users.</p>
+                    </div>
+                    <div class="text-center border rounded-lg hover:shadow-xl p-10 transition cursor-pointer">
+                        <img src="dist/images/service/Lightning.png" alt="icon card" class="mx-auto mb-8">
+                        <h4 class="font-semibold text-xl mb-5">Workflow</h4>
+                        <p class="text-slate-500">From cultivating new ideas to connecting the dots for customers or users.</p>
+                    </div>
+                </div>
+                <div class="flex flex-col justify-center items-start">
+                    <h3 class="text-2xl font-semibold text-slate-700">We fuel the growth of purpose driven brands through strategy design empowerment, and market adoption.</h3>
+                    <p class="text-slate-700 mt-8 mb-16">With enterprise-ready security and  administration controls, deploy Pollock company - wide with ease.</p>
+                    <button class="bg-blue-500 py-2 px-4 rounded-md hover:bg-blue-600 transition text-white">Get Started</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="mx-auto">
+       <div class="relative">
+           <img src="dist/images/service/CTA.png" alt="background image" class="mx-auto">
+           <div class="absolute top-28 left-1/4 w-[500px]">
+               <h2 class="text-4xl font-semibold mb-8">Empowering your new app</h2>
+               <p class="text-slate-600">In the new digital era, users are in control of content and community, and experience design is essential.</p>
+               <div class="flex items-center mt-12">
+                   <img src="dist/images/service/play.png" alt="play button" class="cursor-pointer">
+                   <p class="ml-5 text-blue-500 uppercase cursor-pointer">How It Works</p>
+               </div>
+           </div>
+       </div>
+    </div>
+    <div class="grid grid-cols-3 gap-8 my-24">
+        <div class="flex p-8 border w-[370px] mx-auto rounded-lg hover:shadow-lg transition cursor-pointer">
+            <img src="dist/images/service/icon.svg" alt="icon service" class="mr-5 h-[50px]">
+            <div>
+                <h3 class="mb-4">Project Management</h3>
+                <p>We’re design-focused across every touchpoint or interaction</p>
+            </div>
+        </div>
+        <div class="flex p-8 border w-[370px] mx-auto rounded-lg hover:shadow-lg transition cursor-pointer">
+            <img src="dist/images/service/icon.png" alt="icon service" class="mr-5 h-[50px]">
+            <div>
+                <h3 class="mb-4">Centralized Workflows</h3>
+                <p>We’re design-focused across every touchpoint or interaction</p>
+            </div>
+        </div>
+        <div class="flex p-8 border w-[370px] mx-auto rounded-lg hover:shadow-lg transition cursor-pointer">
+            <img src="dist/images/service/Group%2047282.png" alt="icon service" class="mr-5 h-[50px]">
+            <div>
+                <h3 class="mb-4">Digital Marketing</h3>
+                <p>We’re design-focused across every touchpoint or interaction</p>
+            </div>
+        </div>
+    </div>
+    <div class="bg-[#F8FAFC]">
+        <div class="pt-52 text-center mb-[155px]">
+            <h2 class="text-4xl text-slate-700 font-semibold mb-8">Set up your app, pick a plan later</h2>
+            <p class="text-slate-500">Try Shopify free for 14 days, no credit card required</p>
+        </div>
+        <div>
+            <div></div>
+            <div class="grid grid-cols-2 gap-8 w-[1170px] mx-auto">
+                <div class="bg-white rounded-2xl hover:shadow-2xl transition w-[570px]">
+                    <div class="text-center mt-9">
+                        <p class="text-blue-500">Basic</p>
+                        <h3 class="text-3xl font-semibold mt-5 mb-3">$<span class="text-5xl">19</span>/mo</h3>
+                        <p class="text-slate-500">Best for new startups or businesses with occasional in-person sales</p>
+                    </div>
+                    <div class="mb-16 mt-10 pl-24">
+                        <div class="flex items-center mb-4">
+                            <img src="dist/images/service/Icon%20(1).png" alt="icon" class="mr-3">
+                            <p>Unlimited editable boards</p>
+                        </div>
+                        <div class="flex items-center mb-4">
+                            <img src="dist/images/service/Icon%20(1).png" alt="icon" class="mr-3">
+                            <p>Unlimited visitors</p>
+                        </div>
+                        <div class="flex items-center mb-4">
+                            <img src="dist/images/service/Icon%20(1).png" alt="icon" class="mr-3">
+                            <p>Custom templates</p>
+                        </div>
+                        <div class="flex items-center mb-4">
+                            <img src="dist/images/service/Icon%20(1).png" alt="icon" class="mr-3">
+                            <p>Account management</p>
+                        </div>
+                        <div class="flex items-center mb-4">
+                            <img src="dist/images/service/Icon%20(1).png" alt="icon" class="mr-3">
+                            <p>24/7 Support Online</p>
+                        </div>
+                    </div>
+                    <button class="w-full bg-blue-500 hover:bg-blue-600 transition py-2 rounded-b-xl text-white">Start your free trial</button>
+                </div>
+                <div class="bg-white rounded-2xl hover:shadow-2xl transition w-[570px]">
+                    <div class="text-center mt-9">
+                        <p class="text-blue-500">Professional</p>
+                        <h3 class="text-3xl font-semibold mt-5 mb-3">$<span class="text-5xl">39</span>/mo</h3>
+                        <p class="text-slate-500">Best for new startups or businesses with occasional in-person sales</p>
+                    </div>
+                    <div class="mb-16 mt-10 pl-24">
+                        <div class="flex items-center mb-4">
+                            <img src="dist/images/service/Icon%20(1).png" alt="icon" class="mr-3">
+                            <p>Unlimited editable boards</p>
+                        </div>
+                        <div class="flex items-center mb-4">
+                            <img src="dist/images/service/Icon%20(1).png" alt="icon" class="mr-3">
+                            <p>Unlimited visitors</p>
+                        </div>
+                        <div class="flex items-center mb-4">
+                            <img src="dist/images/service/Icon%20(1).png" alt="icon" class="mr-3">
+                            <p>Custom templates</p>
+                        </div>
+                        <div class="flex items-center mb-4">
+                            <img src="dist/images/service/Icon%20(1).png" alt="icon" class="mr-3">
+                            <p>Account management</p>
+                        </div>
+                        <div class="flex items-center mb-4">
+                            <img src="dist/images/service/Icon%20(1).png" alt="icon" class="mr-3">
+                            <p>24/7 Support Online</p>
+                        </div>
+                    </div>
+                    <button class="w-full bg-blue-500 hover:bg-blue-600 transition py-2 rounded-b-xl text-white">Start your free trial</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="text-center my-28">
+        <h2 class="font-semibold text-3xl mb-20">Working with the most trusted brands in the industry</h2>
+        <img src="dist/images/home/Items.png" alt="logo items" class="mx-auto">
+    </div>
+    <div class="bg-[#F8FAFC] pb-32">
+        <h2 class="text-4xl font-semibold text-slate-700 text-center mb-8">What our clients are saying about us</h2>
+        <p class="text-center text-slate-500">Customer satisfaction is a primary goal for our company</p>
+        <div class="grid grid-cols-3 gap-8 w-[1170px] mx-auto mt-20">
+            <div class="bg-white rounded-2xl shadow-xl text-center p-8">
+                <img src="dist/images/service/cheerful-positive-young-european-woman-with-dark-hair-broad-shining-smile-points-with-thumb-aside%201.png"
+                     alt="avatar user"
+                     class="rounded-full mx-auto mb-2">
+                <h3 class="text-slate-700 font-semibold">Monica Smith</h3>
+                <p class="text-slate-500">Web Designer</p>
+                <div class="flex mb-8 mt-5 justify-center">
+                    <img src="dist/images/service/Vector.png" alt="star" class="mx-2">
+                    <img src="dist/images/service/Vector.png" alt="star" class="mx-2">
+                    <img src="dist/images/service/Vector.png" alt="star" class="mx-2">
+                    <img src="dist/images/service/Vector.png" alt="star" class="mx-2">
+                    <img src="dist/images/service/Vector.png" alt="star" class="mx-2">
+                </div>
+                <p class="text-slate-500">Overall experience is awesome!! I'm a visual thinker, and I couldn't function without a tool like this.</p>
+            </div>
+            <div class="bg-white rounded-2xl shadow-xl text-center p-8">
+                <img src="dist/images/service/cheerful-positive-young-european-woman-with-dark-hair-broad-shining-smile-points-with-thumb-aside%201%20(1).png"
+                     alt="avatar user"
+                     class="rounded-full mx-auto mb-2">
+                <h3 class="text-slate-700 font-semibold">Vincent Smith</h3>
+                <p class="text-slate-500">Web Designer</p>
+                <div class="flex mb-8 mt-5 justify-center">
+                    <img src="dist/images/service/Vector.png" alt="star" class="mx-2">
+                    <img src="dist/images/service/Vector.png" alt="star" class="mx-2">
+                    <img src="dist/images/service/Vector.png" alt="star" class="mx-2">
+                    <img src="dist/images/service/Vector.png" alt="star" class="mx-2">
+                    <img src="dist/images/service/Vector.png" alt="star" class="mx-2">
+                </div>
+                <p class="text-slate-500">Overall experience is awesome!! I'm a visual thinker, and I couldn't function without a tool like this.</p>
+            </div>
+            <div class="bg-white rounded-2xl shadow-xl text-center p-8">
+                <img src="dist/images/service/cheerful-positive-young-european-woman-with-dark-hair-broad-shining-smile-points-with-thumb-aside%201%20(2).png"
+                     alt="avatar user"
+                     class="rounded-full mx-auto mb-2">
+                <h3 class="text-slate-700 font-semibold">Stella Smith</h3>
+                <p class="text-slate-500">Web Designer</p>
+                <div class="flex mb-8 mt-5 justify-center">
+                    <img src="dist/images/service/Vector.png" alt="star" class="mx-2">
+                    <img src="dist/images/service/Vector.png" alt="star" class="mx-2">
+                    <img src="dist/images/service/Vector.png" alt="star" class="mx-2">
+                    <img src="dist/images/service/Vector.png" alt="star" class="mx-2">
+                    <img src="dist/images/service/Vector.png" alt="star" class="mx-2">
+                </div>
+                <p class="text-slate-500">Overall experience is awesome!! I'm a visual thinker, and I couldn't function without a tool like this.</p>
             </div>
         </div>
     </div>
 </section>
-<section id="portfolio" class="w-[1170px] mx-auto my-32">
-    <h2 class="text-slate-700 text-4xl font-semibold text-center mb-24">Explore our recent client success stories and witness our full 360 transformations come to life</h2>
-    <div>
-        <div class="flex gap-8">
-            <div>
-                <img src="dist/images/home/portfolio_img%20(4).png" alt="portfolio images">
-                <p class="text-blue-600 text-lg mt-8 mb-12">UX/UI Design</p>
-            </div>
-            <div>
-                <img src="dist/images/home/portfolio_img%20(3).png" alt="portfolio images">
-                <p class="text-blue-600 text-lg mt-8 mb-12">NFT Market UI</p>
-            </div>
-        </div>
-        <div class="flex gap-8">
-            <div>
-                <img src="dist/images/home/portfolio_img%20(2).png" alt="portfolio images">
-                <p class="text-blue-600 text-lg mt-8 mb-12">Health Mobile App</p>
-            </div>
-            <div>
-                <img src="dist/images/home/portfolio_img%20(1).png" alt="portfolio images">
-                <p class="text-blue-600 text-lg mt-8 mb-12">Wallet App Development</p>
-            </div>
-        </div>
-    </div>
+<section id="about_nav" class="hidden">
+    <h1>service works!</h1>
 </section>
-<section id="CTA" class="relative">
-    <img src="dist/images/home/Footer_BG.png" alt="footer background" class="w-full h-fit">
-    <div class="absolute top-1/4 flex justify-center w-full text-center">
-        <div class="w-[870px]">
-            <h2 class="text-slate-700 font-bold text-5xl mb-8">We design & develop transformative
-                user experiences from Silicon Valley</h2>
-            <p class="text-gray-600 text-lg mb-16">Are you ready to start your project? Contact us today and get started!</p>
-            <button class="bg-blue-500 px-4 py-2 rounded-lg text-white hover:bg-blue-600 transition mx-auto">Get Started</button>
-        </div>
-    </div>
+<section id="page_nav" class="hidden">
+    <h1>service works!</h1>
 </section>
-<footer id="footer" class="bg-slate-800 text-gray-300">
+<section id="blog_nav" class="hidden">
+    <h1>service works!</h1>
+</section>
+<section id="contact_nav" class="hidden">
+    <h1>service works!</h1>
+</section>
+<footer id="footer" class="bg-slate-800 text-gray-300 mb-0">
     <div class="grid grid-cols-6 py-24 gap-8 mx-10">
         <img src="dist/images/Logo_footer.png" alt="logo website">
         <div>
@@ -222,5 +444,6 @@
         </div>
     </div>
 </footer>
+<script src="dist/main.js"></script>
 </body>
 </html>
